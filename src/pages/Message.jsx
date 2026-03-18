@@ -38,7 +38,7 @@ function Message() {
     setLoadingFollowers(true);
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/users/${user.user_id}`,
+        `${import.meta.env.VITE_API_URL}/users/${user.user_id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const fullUser = res.data.user;
@@ -48,7 +48,7 @@ function Message() {
 
       const profiles = await Promise.all(
         mutuals.map(uid =>
-          axios.get(`${import.meta.env.VITE_API_URL}/api/users/${uid}`,
+          axios.get(`${import.meta.env.VITE_API_URL}/users/${uid}`,
             { headers: { Authorization: `Bearer ${token}` } }
           ).then(r => r.data.user).catch(() => ({ user_id: uid, username: uid }))
         )

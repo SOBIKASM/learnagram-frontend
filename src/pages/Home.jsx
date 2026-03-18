@@ -41,7 +41,7 @@ const Home = () => {
   const fetchSuggestions = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/users/suggestions/${user.user_id}`,
+        `${import.meta.env.VITE_API_URL}/users/suggestions/${user.user_id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setSuggestions(res.data.suggestions || []);
@@ -53,7 +53,7 @@ const Home = () => {
   const fetchRequests = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/users/requests/${user.user_id}`,
+        `${import.meta.env.VITE_API_URL}/users/requests/${user.user_id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setRequests(res.data.requests || []);
@@ -71,7 +71,7 @@ const Home = () => {
   const handleFollow = async (target_user_id) => {
     try {
       const res = await axios.post(
-        '${import.meta.env.VITE_API_URL}/api/users/follow',
+        `${import.meta.env.VITE_API_URL}/users/follow`,
         { from_user_id: user.user_id, to_user_id: target_user_id },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -84,7 +84,7 @@ const Home = () => {
   const handleAccept = async (requester_id) => {
     try {
       await axios.post(
-        '${import.meta.env.VITE_API_URL}/api/users/accept',
+        '${import.meta.env.VITE_API_URL}/users/accept',
         { user_id: user.user_id, requester_id },
         { headers: { Authorization: `Bearer ${token}` } }
       );
