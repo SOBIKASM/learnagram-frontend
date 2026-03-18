@@ -15,7 +15,7 @@ const Assignments = () => {
     const fetchAssignments = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/classrooms/my-assignments/${user.user_id}`
+          `${import.meta.env.VITE_API_URL}/classrooms/my-assignments/${user.user_id}`
         );
         const data = await response.json();
         setAssignments(Array.isArray(data) ? data : data.assignments || []);
@@ -35,7 +35,7 @@ const Assignments = () => {
   const handleSubmit = async (id) => {
     if (!files[id]) { alert("Choose a file first"); return; }
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/classrooms/assignment/${id}/submit`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/classrooms/assignment/${id}/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -57,7 +57,7 @@ const Assignments = () => {
 
   const handleGrade = async (assignment_id, student_id, score, remarks) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/classrooms/assignment/${assignment_id}/grade`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/classrooms/assignment/${assignment_id}/grade`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
