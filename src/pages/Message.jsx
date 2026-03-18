@@ -20,7 +20,7 @@ function Message() {
     const fetchConversations = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/dm/conversations/${user.user_id}`,
+          `${import.meta.env.VITE_API_URL}/dm/conversations/${user.user_id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setConversations(res.data.conversations || []);
