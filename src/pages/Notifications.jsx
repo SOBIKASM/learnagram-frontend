@@ -11,7 +11,7 @@ const Notification = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await fetch(`http://localhost:7001/api/classrooms/notifications/${user.user_id}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/classrooms/notifications/${user.user_id}`);
         const data = await response.json();
         setNotifications(data);
       } catch (err) {

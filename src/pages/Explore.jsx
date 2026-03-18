@@ -22,7 +22,7 @@ function Explore() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:7001/api/posts/explore', {
+      const res = await axios.get('${import.meta.env.VITE_API_URL}/api/posts/explore', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = Array.isArray(res.data) ? res.data : res.data.posts || [];

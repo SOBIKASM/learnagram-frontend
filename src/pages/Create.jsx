@@ -35,7 +35,7 @@ const Create = () => {
     try {
       const post_id = `POST_${user.user_id}_${Date.now()}`;
 
-      const response = await fetch('http://localhost:7001/api/posts/create', {
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/posts/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

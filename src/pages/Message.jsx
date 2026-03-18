@@ -20,7 +20,7 @@ function Message() {
     const fetchConversations = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:7001/api/dm/conversations/${user.user_id}`,
+          `${import.meta.env.VITE_API_URL}/api/dm/conversations/${user.user_id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setConversations(res.data.conversations || []);
@@ -38,7 +38,7 @@ function Message() {
     setLoadingFollowers(true);
     try {
       const res = await axios.get(
-        `http://localhost:7001/api/users/${user.user_id}`,
+        `${import.meta.env.VITE_API_URL}/api/users/${user.user_id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const fullUser = res.data.user;
@@ -48,7 +48,7 @@ function Message() {
 
       const profiles = await Promise.all(
         mutuals.map(uid =>
-          axios.get(`http://localhost:7001/api/users/${uid}`,
+          axios.get(`${import.meta.env.VITE_API_URL}/api/users/${uid}`,
             { headers: { Authorization: `Bearer ${token}` } }
           ).then(r => r.data.user).catch(() => ({ user_id: uid, username: uid }))
         )

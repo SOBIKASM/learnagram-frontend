@@ -17,7 +17,7 @@ const Classroom = () => {
 
   useEffect(() => {
     // Connect to socket
-    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:7001";
+    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "${import.meta.env.VITE_API_URL}";
     socketRef.current = io(SOCKET_URL);
 
     // Join classroom room

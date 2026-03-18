@@ -13,7 +13,7 @@ function Profile() {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `http://localhost:7001/api/users/${storedUser.user_id}`,
+          `${import.meta.env.VITE_API_URL}/api/users/${storedUser.user_id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         if (response.data.success) {

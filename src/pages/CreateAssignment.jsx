@@ -20,7 +20,7 @@ const CreateAssignment = () => {
     useEffect(() => {
         const fetchMyClasses = async () => {
             try {
-                const res = await fetch(`http://localhost:7001/api/classrooms/my-classrooms/${user.user_id}`);
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/classrooms/my-classrooms/${user.user_id}`);
                 const data = await res.json();
                 setClassrooms(data);
                 if (data.length > 0) {

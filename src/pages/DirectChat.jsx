@@ -20,7 +20,7 @@ function DirectChat() {
 
   useEffect(() => {
     // Connect socket
-    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:7001";
+    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "${import.meta.env.VITE_API_URL}";
     socketRef.current = io(SOCKET_URL);
     socketRef.current.emit("join_dm", roomKey);
 
@@ -31,7 +31,7 @@ function DirectChat() {
     // Fetch history + other user info
     const init = async () => {
       try {
-        const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:7001/api';
+        const API_URL = import.meta.env.VITE_API_BASE_URL || '${import.meta.env.VITE_API_URL}/api';
         const [historyRes, userRes] = await Promise.all([
           axios.get(`${API_URL}/dm/${user.user_id}/${other_id}`,
             { headers: { Authorization: `Bearer ${token}` } }),
@@ -73,7 +73,7 @@ function DirectChat() {
 
     // Save to DB
     try {
-      const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:7001/api';
+      const API_URL = import.meta.env.VITE_API_BASE_URL || '${import.meta.env.VITE_API_URL}/api';
       await axios.post(`${API_URL}/dm/send`, messageData,
         { headers: { Authorization: `Bearer ${token}` } });
     } catch (err) {
