@@ -1,0 +1,135 @@
+.classroom-list-container {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.classroom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.classroom-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #262626;
+  margin: 0;
+}
+
+.create-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.create-btn:hover {
+  opacity: 0.9;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #262626;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.class-card-banner {
+  height: 80px;
+  background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);
+  position: relative;
+}
+
+.class-card-content {
+  padding: 20px;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.class-icon-wrapper {
+  position: absolute;
+  top: -24px;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.class-icon {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f09433, #dc2743);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.class-title {
+  margin: 16px 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.class-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #737373;
+  flex: 1;
+}
+
+.class-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.class-meta-item span:first-child {
+  font-size: 16px;
+}
+
+.class-footer {
+  border-top: 1px solid #efefef;
+  padding-top: 12px;
+  font-size: 12px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

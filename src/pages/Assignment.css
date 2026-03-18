@@ -1,0 +1,484 @@
+/* Assignment.css */
+.assignment-container {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.assignment-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.assignment-page-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #262626;
+  margin: 0 0 4px 0;
+  background: linear-gradient(45deg, #262626, #0095f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.assignment-subtitle {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin: 0;
+}
+
+.create-assignment-btn {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.create-assignment-btn:hover {
+  background: #0081d6;
+}
+
+/* Stats Cards */
+.assignment-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #dbdbdb;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 600;
+  color: #262626;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.stat-card.stat-pending {
+  border-top: 3px solid #f9a825;
+}
+
+.stat-card.stat-submitted {
+  border-top: 3px solid #4caf50;
+}
+
+.stat-card.stat-total {
+  border-top: 3px solid #0095f6;
+}
+
+/* Tabs */
+.assignment-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 8px;
+}
+
+.assignment-tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8e8e8e;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.assignment-tab:hover {
+  color: #262626;
+  background: #f5f5f5;
+}
+
+.assignment-tab.active {
+  color: #0095f6;
+  background: rgba(0, 149, 246, 0.1);
+}
+
+/* Assignment Cards */
+.assignment-card {
+  background: white;
+  border: 1px solid #efefef;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.assignment-card:hover {
+  border-color: #dbdbdb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.assignment-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.assignment-card.urgent::before {
+  opacity: 1;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+}
+
+.assignment-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.assignment-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assignment-class {
+  font-size: 13px;
+  color: #8e8e8e;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.assignment-class::before {
+  content: '📚';
+  font-size: 12px;
+}
+
+.submitted-badge {
+  background: #4caf50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.submitted-badge::before {
+  content: '✓';
+  font-size: 12px;
+}
+
+/* Assignment Meta */
+.assignment-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.days-left {
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.days-left.urgent {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.days-left.overdue {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.points-badge {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Assignment Description */
+.assignment-description {
+  font-size: 14px;
+  color: #262626;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #efefef;
+}
+
+.assignment-due {
+  font-size: 13px;
+  color: #8e8e8e;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.assignment-due::before {
+  content: '📅';
+  font-size: 12px;
+}
+
+/* Action Buttons */
+.assignment-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.choose-file-btn {
+  background: #f5f5f5;
+  border: 1px solid #efefef;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #262626;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.choose-file-btn:hover {
+  background: #eeeeee;
+  border-color: #dbdbdb;
+}
+
+.choose-file-btn.has-file {
+  background: #e3f2fd;
+  border-color: #0095f6;
+  color: #0095f6;
+}
+
+.submit-assignment-btn {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-assignment-btn:hover {
+  background: #0081d6;
+}
+
+.submit-assignment-btn:active {
+  transform: scale(0.98);
+}
+
+/* Empty States */
+.no-assignments {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border: 1px solid #efefef;
+  border-radius: 16px;
+  color: #8e8e8e;
+  font-size: 15px;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+/* Instagram Stories-style gradient backgrounds */
+.assignment-card:nth-child(3n+1) .points-badge {
+  background: linear-gradient(45deg, #f09433 0%, #d62976 100%);
+}
+
+.assignment-card:nth-child(3n+2) .points-badge {
+  background: linear-gradient(45deg, #833ab4 0%, #fd1d1d 100%);
+}
+
+.assignment-card:nth-child(3n+3) .points-badge {
+  background: linear-gradient(45deg, #4f5bd5 0%, #962fbf 100%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .assignment-container {
+    padding: 15px 10px;
+  }
+
+  .assignment-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-assignment-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .assignment-stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .assignment-tabs {
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .assignment-tab {
+    white-space: nowrap;
+  }
+
+  .assignment-card {
+    padding: 16px;
+  }
+
+  .assignment-name {
+    font-size: 16px;
+  }
+
+  .assignment-actions {
+    flex-direction: column;
+  }
+
+  .choose-file-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .submit-assignment-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .assignment-container {
+    padding: 20px;
+  }
+
+  .assignment-stats {
+    gap: 12px;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.assignment-card {
+  animation: slideIn 0.3s ease;
+}
+
+/* File input styling */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom scrollbar */
+.assignment-tabs::-webkit-scrollbar {
+  height: 3px;
+}
+
+.assignment-tabs::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.assignment-tabs::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 3px;
+}

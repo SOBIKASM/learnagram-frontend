@@ -1,0 +1,93 @@
+.explore-container {
+  padding: 20px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+.explore-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Search */
+.explore-search input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Trending Tags */
+.trending-tags {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  white-space: nowrap;
+}
+
+/* Feed */
+.explore-feed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card */
+.explore-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+}
+
+.explore-card h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.explore-card p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.explore-card button {
+  width: 100%;
+  padding: 6px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}

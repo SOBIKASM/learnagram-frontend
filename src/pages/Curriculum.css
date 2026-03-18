@@ -1,0 +1,108 @@
+/* Color Palette & Gradients */
+:root {
+  --ig-grad: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  --blue-grad: linear-gradient(135deg, #0095f6, #0056b3);
+  --glass: rgba(255, 255, 255, 0.8);
+}
+
+.curriculum-container {
+  max-width: 600px; /* Thinner feed like IG mobile */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Header Styling */
+.gradient-text {
+  font-family: Poppins, sans-serif;
+  background: var(--ig-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+/* Card Styling */
+.ig-card {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #efefef;
+}
+
+.avatar-mini {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #262626;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.dept-name {
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+}
+
+.location {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+/* Buttons Styling */
+.sem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+
+.glass-btn {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  color:black;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+ .glass-btn a{
+  text-decoration: none;
+  color:black;
+  transition: all 2s ease;
+}
+.glass-btn:hover {
+  background: var(--ig-grad);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(220, 39, 67, 0.3);
+}
+.glass-btn:hover a{
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .sem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Main Background */
+.login-page {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* The Main Box */
+.login-container {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.brand-header h1 {
+font-size:28px;
+  font-weight:600;
+  margin-bottom:20px;
+  text-align: center;
+  background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 9px 7px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.login-form input:focus {
+  border: 1px solid #a8a8a8;
+  outline: none;
+}
+
+.login-form label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8e8e8e;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+/* Submit Button with Insta-Blue */
+.submit-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 7px;
+  font-weight: 600;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #1877f2;
+}
+
+/* Separator Line */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.or-text {
+  margin: 0 18px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Google Button */
+.google-btn {
+  background: none;
+  border: none;
+  color: #385185;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Sign up box */
+.signup-box {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-box a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.demo-hint {
+  font-size: 14px;
+  color: #f59e0b;
+  margin: 10px 0;
+  padding: 8px;
+  background: #fff7e6;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+.demo-fill-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.demo-fill-btn:hover {
+  background: #e8e8e8;
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
